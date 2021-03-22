@@ -15,6 +15,7 @@ export class TarefaService {
   cadastrar(tarefa: Tarefa): void {
     const tarefas = this.listarTodos();
     tarefa.id = new Date().getTime();
+    tarefas.push(tarefa);
     localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
