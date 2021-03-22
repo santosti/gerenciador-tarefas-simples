@@ -21,7 +21,6 @@ export class CadastrarTarefaComponent implements OnInit {
 
   cadastrarTarefa(): void {
     if (this.formTarefa.form.valid) {
-      console.log('cai aqui 2', this.tarefa);
       this.tarefaService.cadastrar(this.tarefa);
       this.router.navigate(['/tarefas']);
     }
